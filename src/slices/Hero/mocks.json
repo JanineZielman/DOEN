@@ -13,6 +13,31 @@
 						}
 					}
 				]
+			},
+			"slug": {
+				"__TYPE__": "FieldContent",
+				"value": "broken",
+				"type": "Text"
+			},
+			"translatex": {
+				"__TYPE__": "FieldContent",
+				"value": "88",
+				"type": "Number"
+			},
+			"translatey": {
+				"__TYPE__": "FieldContent",
+				"value": "58",
+				"type": "Number"
+			},
+			"rotate": {
+				"__TYPE__": "FieldContent",
+				"value": "10",
+				"type": "Number"
+			},
+			"scale": {
+				"__TYPE__": "FieldContent",
+				"value": "22",
+				"type": "Number"
 			}
 		},
 		"items": []

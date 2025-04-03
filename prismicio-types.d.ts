@@ -171,6 +171,56 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   title: prismic.RichTextField;
+
+  /**
+   * Slug field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.slug
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  slug: prismic.KeyTextField;
+
+  /**
+   * TranslateX field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.translatex
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  translatex: prismic.NumberField;
+
+  /**
+   * TranslateY field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.translatey
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  translatey: prismic.NumberField;
+
+  /**
+   * Rotate field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.rotate
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  rotate: prismic.NumberField;
+
+  /**
+   * Scale field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.scale
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  scale: prismic.NumberField;
 }
 
 /**

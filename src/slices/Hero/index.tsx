@@ -14,18 +14,17 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  */
 const Hero: FC<HeroProps> = ({ slice }) => {
   const [scrollProgress, setScrollProgress] = useState(0);
-  console.log(scrollProgress)
+  console.log(slice.primary.slug)
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.KUTE) {
       let config = {
         shapes: [
-          { fill: "#D5FF90", stroke: "" },
-          { fill: "transparent", stroke: "#D5FF90" },
-          { fill: "transparent", stroke: "#D5FF90" },
-          { fill: "transparent", stroke: "#D5FF90" },
+          { fill: slice.primary.slug, stroke: "" },
+          { fill: "transparent", stroke: slice.primary.slug },
+          { fill: "transparent", stroke: slice.primary.slug },
+          { fill: "transparent", stroke: slice.primary.slug },
         ],
-        colors: ["#D5FF90", "#FFBCF9", "#B7DFFF", "#FFA167"],
         duration: 1200,
         morph: 60,
         easing: "easingQuinticInOut",
@@ -50,9 +49,9 @@ const Hero: FC<HeroProps> = ({ slice }) => {
 
         const transformParams = [
           {
-            translate: [-870, -500],
-            rotate: progress * 360,
-            scale: 1.001,
+            translate: [slice.primary.translatex, slice.primary.translatey],
+            rotate: slice.primary.rotate,
+            scale: slice.primary.scale,
             callback() {
                 transform(transformParams[0]);
             },
@@ -101,9 +100,9 @@ const Hero: FC<HeroProps> = ({ slice }) => {
 
       transform(
         {
-          translate: [-870, -500],
-          rotate: 0,
-          scale: 1.001,
+          translate: [slice.primary.translatex, slice.primary.translatey],
+          rotate: slice.primary.rotate,
+          scale: slice.primary.scale,
         }
       )
     }

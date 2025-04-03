@@ -20,6 +20,41 @@
             "allowTargetBlank": true,
             "multi": "heading1"
           }
+        },
+        "slug": {
+          "type": "Text",
+          "config": {
+            "label": "Slug",
+            "placeholder": ""
+          }
+        },
+        "translatex": {
+          "type": "Number",
+          "config": {
+            "label": "TranslateX",
+            "placeholder": ""
+          }
+        },
+        "translatey": {
+          "type": "Number",
+          "config": {
+            "label": "TranslateY",
+            "placeholder": ""
+          }
+        },
+        "rotate": {
+          "type": "Number",
+          "config": {
+            "label": "Rotate",
+            "placeholder": ""
+          }
+        },
+        "scale": {
+          "type": "Number",
+          "config": {
+            "label": "Scale",
+            "placeholder": ""
+          }
         }
       },
       "items": {}
