@@ -78,8 +78,20 @@ h3{
   }
 }
 
+
 @media print{
-  .chapter.achtergrond, .chapter.het-financieringslandschap{
+  body{
+    background-color: white;
+  }
+  .chapter.achtergrond{
     padding-left: 0;
+    background-color: white;
+    color: var(--dark-blue);
+  }
+  
+  .chapter.het-financieringslandschap{
+    padding-left: 0;
+    background-color: white;
+    color: var(--dark-brown);
   }
 }
