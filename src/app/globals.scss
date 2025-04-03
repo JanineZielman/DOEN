@@ -1,0 +1,70 @@
+//colors
+:root{
+--grey: #F4F4F4;
+--dark-blue: #1E1327;
+--dark-brown: #341919;
+--dark-green:#1D2E20;
+--dark-brown2:#261919;
+
+--green: #D5FF90;
+--pink: #FFBCF9;
+--blue: #B7DFFF;
+--orange: #FFA167;
+}
+
+@font-face {
+  font-family: 'IBM sans';
+  src: url('/IBMPlexSans-VariableFont_wdth\,wght.ttf');
+}
+
+@font-face {
+  font-family: 'IBM mono';
+  src: url('/IBMPlexMono-Regular.ttf');
+}
+
+
+body{
+  margin: 0;
+  background-color: var(--grey);
+  font-family: 'IBM sans';
+}
+
+h1{
+  font-weight: 500;
+}
+
+p{
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+h3{
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.chapter.achtergrond{
+  background-color: var(--dark-blue);
+  color: var(--green);
+}
+
+.chapter.het-financieringslandschap{
+  background-color: var(--dark-brown);
+  color: var(--pink);
+}
+
+.chapter.potentiele-focusgebieden{
+  background-color: var(--dark-green);
+  color: var(--blue);
+}
+
+.chapter.aanbevelingen{
+  background-color: var(--dark-brown2);
+  color: var(--orange);
+}
+
+@media (max-width: 768px){
+  p{
+    font-size: 18px;
+  }
+}

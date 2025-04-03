@@ -1,0 +1,27 @@
+.quoteWrapper{
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 48px;
+  border-left: 1px solid;
+  padding-left: 30px;
+  padding-right: 14px;
+  padding-top: 24px;
+  .quote h2{
+    font-size: 48px;
+    font-family: "IBM MONO";
+  }
+  .source p{
+    font-size: 16px;
+    font-family: "IBM MONO";
+  }
+}
+
+@media (max-width: 768px){
+  .quoteWrapper{
+    margin-left: 24px;
+    width: 80%;
+    .quote h2{
+      font-size: 28px;
+    }
+  }
+}

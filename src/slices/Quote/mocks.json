@@ -1,0 +1,31 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"quote": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Ground"
+						}
+					}
+				]
+			},
+			"source": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Pariatur nisi id sunt commodo anim culpa eu id id est sint nisi culpa veniam. Nulla do fugiat voluptate cupidatat in reprehenderit ad duis do eu ad. Ea anim nostrud sunt proident amet irure sit et duis proident ullamco aute laboris."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
