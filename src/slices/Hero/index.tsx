@@ -1,5 +1,5 @@
 'use client'
-import { FC, useEffect } from "react";
+import { FC, useEffect, useState } from "react";
 import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import styles from "./Styles.module.scss";
@@ -13,6 +13,9 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  * Component for "Hero" Slices.
  */
 const Hero: FC<HeroProps> = ({ slice }) => {
+  const [scrollProgress, setScrollProgress] = useState(0);
+  console.log(scrollProgress)
+
   useEffect(() => {
     if (typeof window !== "undefined" && window.KUTE) {
       let config = {
@@ -39,6 +42,31 @@ const Hero: FC<HeroProps> = ({ slice }) => {
         document.querySelector(`#heart-path-${i + 1}`)?.setAttribute("d", paths[i]);
       };
 
+      const handleScroll = () => {
+        const scrollY = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = Math.min(scrollY / docHeight, 1);
+        setScrollProgress(progress);
+
+        const transformParams = [
+          {
+            translate: [-870, -500],
+            rotate: progress * 360,
+            scale: 1.001,
+            callback() {
+                transform(transformParams[0]);
+            },
+          },
+        ]
+        
+        transform(transformParams[0]);
+      };
+
+
+      window.addEventListener("scroll", handleScroll);
+
+
+
       let transform = (params: any) => {
         for (let i = 0; i < 4; i++) {
           window.KUTE.to(
@@ -53,7 +81,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
               morphIndex: config.morph,
               complete() {
                 if (i === 3) {
-                  params.callback();
+                  // params.callback();
                   updatePaths(i);
                 }
               },
@@ -71,43 +99,15 @@ const Hero: FC<HeroProps> = ({ slice }) => {
         }
       }
 
-      const transformParams = [
+      transform(
         {
           translate: [-870, -500],
           rotate: 0,
           scale: 1.001,
-          callback() {
-            transform(transformParams[1]);
-          },
-        },
-        {
-          translate: [-870, -500],
-          rotate: 0,
-          scale: 1.2,
-          callback() {
-            transform(transformParams[2]);
-          },
-        },
-        {
-          translate: [-870, -500],
-          rotate: 15,
-          scale: 1.3,
-          callback() {
-            transform(transformParams[3]);
-          },
-        },
-        {
-          translate: [-870, -500],
-          rotate: 30,
-          scale: 1.1,
-          callback() {
-            transform(transformParams[0]);
-          },
-        },
-      ];
-
-      transform(transformParams[0]);
+        }
+      )
     }
+    
   }, []);
 
   return (
