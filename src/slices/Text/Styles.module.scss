@@ -12,3 +12,11 @@
   }
 }
 
+
+@media print{
+  .textWrapper{
+    p{
+      break-inside: avoid;
+    }
+  }
+}
