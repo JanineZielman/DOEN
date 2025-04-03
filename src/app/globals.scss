@@ -36,6 +36,7 @@ h1{
 p{
   font-size: 24px;
   line-height: 1.5;
+  margin: 50px 0;
 }
 
 h3{
@@ -46,25 +47,39 @@ h3{
 .chapter.achtergrond{
   background-color: var(--dark-blue);
   color: var(--green);
+  padding-left: 25vw;
+  padding-bottom: 100px;
 }
 
 .chapter.het-financieringslandschap{
   background-color: var(--dark-brown);
   color: var(--pink);
+  padding-left: 25vw;
+  padding-bottom: 100px;
 }
 
 .chapter.potentiele-focusgebieden{
   background-color: var(--dark-green);
   color: var(--blue);
+  padding-right: 25vw;
+  padding-bottom: 100px;
 }
 
 .chapter.aanbevelingen{
   background-color: var(--dark-brown2);
   color: var(--orange);
+  padding-right: 25vw;
+  padding-bottom: 100px;
 }
 
 @media (max-width: 768px){
   p{
     font-size: 18px;
+  }
+}
+
+@media print{
+  .chapter.achtergrond, .chapter.het-financieringslandschap{
+    padding-left: 0;
   }
 }

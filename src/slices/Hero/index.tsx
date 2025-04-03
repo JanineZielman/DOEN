@@ -73,44 +73,43 @@ const Hero: FC<HeroProps> = ({ slice }) => {
 
       const transformParams = [
         {
-          translate: [-370, -500],
+          translate: [-870, -500],
           rotate: 0,
           scale: 1.001,
           callback() {
             transform(transformParams[1]);
           },
         },
-        {
-          translate: [-300, 500],
-          rotate: 0,
-          scale: 1.2,
-          callback() {
-            transform(transformParams[2]);
-          },
-        },
-        {
-          translate: [1000, 500],
-          rotate: 45,
-          scale: 1.3,
-          callback() {
-            transform(transformParams[3]);
-          },
-        },
-        {
-          translate: [1200, -800],
-          rotate: 30,
-          scale: 1.1,
-          callback() {
-            transform(transformParams[0]);
-          },
-        },
+        // {
+        //   translate: [-900, 500],
+        //   rotate: 0,
+        //   scale: 1.2,
+        //   callback() {
+        //     transform(transformParams[2]);
+        //   },
+        // },
+        // {
+        //   translate: [2000, 500],
+        //   rotate: 45,
+        //   scale: 1.3,
+        //   callback() {
+        //     transform(transformParams[3]);
+        //   },
+        // },
+        // {
+        //   translate: [1600, -800],
+        //   rotate: 30,
+        //   scale: 1.1,
+        //   callback() {
+        //     transform(transformParams[0]);
+        //   },
+        // },
       ];
 
       transform(transformParams[0]);
     }
   }, []);
 
-  console.log(slice)
   return (
     <div className={styles.wrapper}>
     <div className={styles.intro}>
