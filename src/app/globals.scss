@@ -26,11 +26,17 @@
   src: url('/IBMPlexMono-Regular.ttf');
 }
 
+html{
+  overflow-x: hidden;
+  max-width: 100vw;
+}
 
 body{
   margin: 0;
   background-color: var(--grey);
   font-family: 'IBM sans';
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 h1{
@@ -120,8 +126,17 @@ a{
   p, li{
     font-size: 18px;
   }
-  .chapter.achtergrond{
-    padding-left: 0;
+  h3{
+    font-size: 28px;
+  }
+  .chapter{
+    padding: 0 14px;
+  }
+  .chapter.achtergrond, .chapter.het-financieringslandschap{
+    padding-left: 15vw;
+  }
+  .chapter.potentiele-focusgebieden, .chapter.aanbevelingen{
+    padding-right: 15vw;
   }
   
 }

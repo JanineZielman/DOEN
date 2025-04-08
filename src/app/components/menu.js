@@ -9,10 +9,10 @@ export default function Menu() {
     <div className="menu">
       <div className="left">
         <Link href="/">HOME</Link>
-        <Link href="/achtergrond">H1</Link>
-        <Link href="/het-financieringslandschap">H2</Link>
-        <Link href="/potentiele-focusgebieden">H3</Link>
-        <Link href="/aanbevelingen">H4</Link>
+        <a href="/achtergrond">H1</a>
+        <a href="/het-financieringslandschap">H2</a>
+        <a href="/potentiele-focusgebieden">H3</a>
+        <a href="/aanbevelingen">H4</a>
       </div>
       <div className="right" onClick={handlePrint}>
         Print

@@ -63,25 +63,30 @@ const Hero: FC<HeroProps> = ({ slice }) => {
         }
       };
 
+      let scrollTimeout: ReturnType<typeof setTimeout>;
+
       const handleScroll = () => {
-        const scrollY = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = Math.min(scrollY / docHeight, 1);
-
-        const transformParams = {
-          translate: [
-            String(slice.primary.translatex ?? 0),
-            String(slice.primary.translatey ?? 0),
-          ] as [string, string],
-          
-          rotate: String(slice.primary.rotate ?? 0),
-          scale: String(slice.primary.scale ?? 1),
-          callback() {
-            transform(transformParams);
-          },
-        };
-
-        transform(transformParams);
+        clearTimeout(scrollTimeout);
+      
+        scrollTimeout = setTimeout(() => {
+          const scrollY = window.scrollY;
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = Math.min(scrollY / docHeight, 1);
+        
+          const rotation = progress * 360;
+        
+          const transformParams = {
+            translate: [
+              String(slice.primary.translatex ?? 0),
+              String(slice.primary.translatey ?? 0),
+            ] as [string, string],
+            rotate: String(rotation),
+            scale: String(slice.primary.scale ?? 1),
+          };
+        
+          transform(transformParams);
+        }, 50);
+        
       };
 
       window.addEventListener('scroll', handleScroll);

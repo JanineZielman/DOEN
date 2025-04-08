@@ -18,10 +18,14 @@
 
 @media (max-width: 768px){
   .quoteWrapper{
-    margin-left: 24px;
-    width: 80%;
+    margin-left: 0px;
+    width: 100%;
+
     .quote h2{
       font-size: 24px;
+    }
+    a{
+      word-wrap: break-word;
     }
   }
 }

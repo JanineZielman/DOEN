@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type ChapterDocumentDataSlicesSlice =
+  | FootnotesSlice
   | TextSlice
   | QuoteSlice
   | ImageSlice
@@ -157,6 +158,36 @@ export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
 export type AllDocumentTypes = ChapterDocument | PageDocument;
+
+/**
+ * Default variation for Footnotes Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FootnotesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *Footnotes*
+ */
+type FootnotesSliceVariation = FootnotesSliceDefault;
+
+/**
+ * Footnotes Shared Slice
+ *
+ * - **API ID**: `footnotes`
+ * - **Description**: Footnotes
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FootnotesSlice = prismic.SharedSlice<
+  "footnotes",
+  FootnotesSliceVariation
+>;
 
 /**
  * Primary content in *Hero → Default → Primary*
@@ -481,6 +512,9 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      FootnotesSlice,
+      FootnotesSliceVariation,
+      FootnotesSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,

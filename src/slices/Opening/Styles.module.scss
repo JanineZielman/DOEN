@@ -81,10 +81,36 @@
   transform: translate3d(-50%, 0, 0);
 }
 
+.footer{
+  position: absolute;
+  z-index: 9;
+  bottom: 0;
+  padding: 14px;
+  text-align: center;
+  width: 100%;
+}
+
+.logo{
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  position: absolute;
+  right: 14px;
+  bottom: 0;
+  mask-image: url(/logo.svg);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: 0;
+}
+
 @media (max-width: 768px){
   .intro{
+    padding: 0 14px;
     h1{
       font-size: 32px;
+    }
+    .links a{
+      font-size: 18px;
     }
   }
   .heart{

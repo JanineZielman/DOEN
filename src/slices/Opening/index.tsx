@@ -163,6 +163,9 @@ const Opening: FC<OpeningProps> = ({ slice }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.intro}>
+        <div className={styles.langSwitch}>
+          EN / <b>NL</b>
+        </div>
         <PrismicRichText field={slice.primary.title}/>
         <div className={styles.links}>
           {slice.primary.link.map((link:any, i) => (
@@ -178,7 +181,10 @@ const Opening: FC<OpeningProps> = ({ slice }) => {
           <path id="heart-path-1" ></path>
         </svg>
       </div>
-      
+      <div className={styles.footer}>
+        In opdracht van Stichting DOEN, Door Martijn Blom en Arthur Steiner
+        <div className={styles.logo}></div>
+      </div>
     </div>
   );
 };
