@@ -15,7 +15,7 @@
 
 @media print{
   .textWrapper{
-    p{
+    p, li{
       break-inside: avoid;
     }
   }

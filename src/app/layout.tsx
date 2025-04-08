@@ -9,7 +9,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body suppressHydrationWarning>
         {children}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/1.6.2/kute.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/1.6.2/kute-svg.min.js"></script>

@@ -12,6 +12,10 @@
 --orange: #FFA167;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: 'IBM sans';
   src: url('/IBMPlexSans-VariableFont_wdth\,wght.ttf');
@@ -39,9 +43,19 @@ p{
   margin: 50px 0;
 }
 
+li{
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
 h3{
   font-size: 36px;
   font-weight: 500;
+}
+
+a{
+  color: inherit;
 }
 
 .chapter.achtergrond{
@@ -49,6 +63,10 @@ h3{
   color: var(--green);
   padding-left: 25vw;
   padding-bottom: 100px;
+  .menu{
+    background-color: var(--dark-blue);
+    color: var(--green);
+  }
 }
 
 .chapter.het-financieringslandschap{
@@ -56,6 +74,10 @@ h3{
   color: var(--pink);
   padding-left: 25vw;
   padding-bottom: 100px;
+  .menu{
+    background-color: var(--dark-brown);
+    color: var(--pink);
+  }
 }
 
 .chapter.potentiele-focusgebieden{
@@ -63,6 +85,10 @@ h3{
   color: var(--blue);
   padding-right: 25vw;
   padding-bottom: 100px;
+  .menu{
+    background-color: var(--dark-green);
+    color: var(--blue);
+  }
 }
 
 .chapter.aanbevelingen{
@@ -70,28 +96,81 @@ h3{
   color: var(--orange);
   padding-right: 25vw;
   padding-bottom: 100px;
+  .menu{
+    background-color: var(--dark-brown2);
+    color: var(--orange);
+  }
+}
+
+.menu{
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  padding: 10px 24px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  a{
+    margin-right: 24px;
+    text-decoration: none;
+  }
 }
 
 @media (max-width: 768px){
-  p{
+  p, li{
     font-size: 18px;
   }
+  .chapter.achtergrond{
+    padding-left: 0;
+  }
+  
 }
 
 
 @media print{
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
   body{
     background-color: white;
   }
+  .menu{
+    display: none;
+  }
+  .chapter{
+    padding: 24px;
+  }
+  h3{
+    page-break-before: always;
+    padding-top: 0;
+    margin-top: 0;
+  }
   .chapter.achtergrond{
-    padding-left: 0;
+    padding-left: 24px;
     background-color: white;
     color: var(--dark-blue);
   }
   
   .chapter.het-financieringslandschap{
-    padding-left: 0;
+    padding-left: 24px;
     background-color: white;
     color: var(--dark-brown);
+  }
+
+  .chapter.potentiele-focusgebieden{
+    background-color: white;
+    color: var(--dark-green);
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 100px;
+  }
+  
+  .chapter.aanbevelingen{
+    background-color: white;
+    color: var(--dark-brown2);
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 100px;
   }
 }

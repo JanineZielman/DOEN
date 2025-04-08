@@ -56,3 +56,12 @@
     min-width: 200vw;
   }
 }
+
+@media print{
+  .heartWrap{
+    z-index: -1;
+  }
+   .heart {
+    z-index: 0;
+  }
+}

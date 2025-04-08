@@ -6,6 +6,7 @@ import { SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
+import Menu from "../components/menu"
 
 type Params = { uid: string };
 
@@ -14,9 +15,9 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   const client = createClient();
   const page = await client.getByUID("chapter", uid).catch(() => notFound());
 
-  // <SliceZone> renders the page's slices.
   return (
     <div className={`chapter ${page.uid}`}>
+      <Menu/>
       <SliceZone slices={page.data.slices} components={components} />
     </div>
   )

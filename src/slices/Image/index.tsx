@@ -1,6 +1,8 @@
 import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
+import { PrismicNextImage } from "@prismicio/next";
+import styles from "./Styles.module.scss"
 
 /**
  * Props for `Image`.
@@ -15,8 +17,9 @@ const Image: FC<ImageProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className={styles.imageWrapper}
     >
-      Placeholder component for image (variation: {slice.variation}) Slices
+      <PrismicNextImage field={slice.primary.image} />
     </section>
   );
 };
