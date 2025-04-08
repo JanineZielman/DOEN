@@ -41,12 +41,15 @@ body{
 
 h1{
   font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1px;
 }
 
 p{
   font-size: 24px;
   line-height: 1.5;
   margin: 50px 0;
+  letter-spacing: 1px;
 }
 
 li{
@@ -58,6 +61,7 @@ li{
 h3{
   font-size: 36px;
   font-weight: 500;
+  letter-spacing: 1px;
 }
 
 a{
@@ -122,6 +126,29 @@ a{
   }
 }
 
+.footnotes{
+  max-width: 900px;
+  margin: auto;
+  padding-top: 48px;
+  ol{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  li{
+    font-size: 14px;
+    // margin: 10px;
+    font-family: IBM Mono;
+    width: 45%;
+    word-wrap: break-word;
+  }
+  h3{
+    padding-bottom: 5px;
+    border-bottom: 1px solid;
+  }
+
+}
+
 @media (max-width: 768px){
   p, li{
     font-size: 18px;
@@ -145,7 +172,7 @@ a{
 @media print{
   @page {
     size: A4 portrait;
-    margin: 0;
+    margin: 24px;
   }
   body{
     background-color: white;
@@ -153,8 +180,18 @@ a{
   .menu{
     display: none;
   }
-  .chapter{
-    padding: 24px;
+  .footnotes{
+    padding-top: 0;
+    page-break-before: always;
+    li{
+      break-inside: avoid;
+    }
+  }
+  p, li{
+    font-size: 18px;
+  }
+  h1{
+    font-size: 48px!important;
   }
   h3{
     page-break-before: always;

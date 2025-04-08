@@ -10,7 +10,19 @@
       "docURL": "...",
       "version": "initial",
       "description": "Default",
-      "imageUrl": ""
+      "imageUrl": "",
+      "primary": {
+        "footnotes": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Footnotes",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,list-item,o-list-item,strong,em,hyperlink"
+          }
+        }
+      },
+      "items": {}
     }
   ]
 }

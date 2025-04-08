@@ -160,6 +160,21 @@ export type PageDocument<Lang extends string = string> =
 export type AllDocumentTypes = ChapterDocument | PageDocument;
 
 /**
+ * Primary content in *Footnotes → Default → Primary*
+ */
+export interface FootnotesSliceDefaultPrimary {
+  /**
+   * Footnotes field in *Footnotes → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footnotes.default.primary.footnotes
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  footnotes: prismic.RichTextField;
+}
+
+/**
  * Default variation for Footnotes Slice
  *
  * - **API ID**: `default`
@@ -168,7 +183,7 @@ export type AllDocumentTypes = ChapterDocument | PageDocument;
  */
 export type FootnotesSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<FootnotesSliceDefaultPrimary>,
   never
 >;
 
@@ -513,6 +528,7 @@ declare module "@prismicio/client" {
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
       FootnotesSlice,
+      FootnotesSliceDefaultPrimary,
       FootnotesSliceVariation,
       FootnotesSliceDefault,
       HeroSlice,

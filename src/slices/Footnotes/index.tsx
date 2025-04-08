@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
 /**
  * Props for `Footnotes`.
@@ -15,8 +15,12 @@ const Footnotes: FC<FootnotesProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="footnotes"
     >
-      Placeholder component for footnotes (variation: {slice.variation}) Slices
+      <h3>Footnotes</h3>
+      <div>
+        <PrismicRichText field={slice.primary.footnotes} />
+      </div>
     </section>
   );
 };

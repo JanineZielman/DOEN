@@ -2,7 +2,19 @@
 	{
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
-		"primary": {},
+		"primary": {
+			"footnotes": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sunt do incididunt nulla incididunt aliquip Lorem ad. Eu non cillum ea."
+						}
+					}
+				]
+			}
+		},
 		"items": []
 	}
 ]
