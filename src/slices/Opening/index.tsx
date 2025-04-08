@@ -182,7 +182,7 @@ const Opening: FC<OpeningProps> = ({ slice }) => {
         </svg>
       </div>
       <div className={styles.footer}>
-        In opdracht van Stichting DOEN, Door Martijn Blom en Arthur Steiner
+        <p>In opdracht van Stichting DOEN, Door Martijn Blom en Arthur Steiner</p>
         <div className={styles.logo}></div>
       </div>
     </div>
