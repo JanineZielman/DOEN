@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Menu() {
   const handlePrint = () => {
-    window.print();
+    // window.print();
   };
   return (
     <div className="menu">

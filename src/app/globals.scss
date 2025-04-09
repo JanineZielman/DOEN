@@ -64,12 +64,35 @@ h3{
   letter-spacing: 1px;
 }
 
+h4{
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+
 a{
   color: inherit;
 }
 
-.chapter.achtergrond{
+.achtergrond #heartWrap{
   background-color: var(--dark-blue);
+}
+
+.het-financieringslandschap #heartWrap{
+  background-color: var(--dark-brown);
+}
+
+.potentiele-focusgebieden #heartWrap{
+  background-color: var(--dark-green);
+}
+
+.aanbevelingen #heartWrap{
+  background-color: var(--dark-brown2);
+}
+
+.chapter.achtergrond{
+  // background-color: var(--dark-blue);
   color: var(--green);
   padding-left: 25vw;
   padding-bottom: 100px;
@@ -80,7 +103,7 @@ a{
 }
 
 .chapter.het-financieringslandschap{
-  background-color: var(--dark-brown);
+  // background-color: var(--dark-brown);
   color: var(--pink);
   padding-left: 25vw;
   padding-bottom: 100px;
@@ -91,7 +114,7 @@ a{
 }
 
 .chapter.potentiele-focusgebieden{
-  background-color: var(--dark-green);
+  // background-color: var(--dark-green);
   color: var(--blue);
   padding-right: 25vw;
   padding-bottom: 100px;
@@ -102,7 +125,7 @@ a{
 }
 
 .chapter.aanbevelingen{
-  background-color: var(--dark-brown2);
+  // background-color: var(--dark-brown2);
   color: var(--orange);
   padding-right: 25vw;
   padding-bottom: 100px;
@@ -130,18 +153,35 @@ a{
   max-width: 900px;
   margin: auto;
   padding-top: 48px;
-  ol{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  div{
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    column-count: 2;
   }
-  li{
+  // ol{
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: space-between;
+  // }
+  li, p{
     font-size: 14px;
     // margin: 10px;
+    margin: 10px 0;
     font-family: IBM Mono;
-    width: 45%;
+    width: 100%;
     word-wrap: break-word;
   }
+  p{
+    display: inline-flex;
+    flex-wrap: wrap;
+    a{
+      margin-left: 5px;
+      max-width: calc(100% - 40px);
+    }
+
+  }
+
   h3{
     padding-bottom: 5px;
     border-bottom: 1px solid;
@@ -149,7 +189,7 @@ a{
 
 }
 
-@media (max-width: 768px){
+@media (max-width: 1000px){
   p, li{
     font-size: 18px;
   }
@@ -172,10 +212,10 @@ a{
 @media print{
   @page {
     size: A4 portrait;
-    margin: 24px;
+    margin: 12mm;
   }
   body{
-    background-color: white;
+    background-color: transparent;
   }
   .menu{
     display: none;
@@ -183,8 +223,9 @@ a{
   .footnotes{
     padding-top: 0;
     page-break-before: always;
-    li{
+    li, p, a{
       break-inside: avoid;
+      font-size: 12px;
     }
   }
   p, li{
@@ -193,25 +234,25 @@ a{
   h1{
     font-size: 48px!important;
   }
-  h3{
+  h3, h4{
     page-break-before: always;
     padding-top: 0;
     margin-top: 0;
   }
   .chapter.achtergrond{
     padding-left: 24px;
-    background-color: white;
+    background-color: transparent;
     color: var(--dark-blue);
   }
   
   .chapter.het-financieringslandschap{
     padding-left: 24px;
-    background-color: white;
+    background-color: transparent;
     color: var(--dark-brown);
   }
 
   .chapter.potentiele-focusgebieden{
-    background-color: white;
+    background-color: transparent;
     color: var(--dark-green);
     padding-left: 24px;
     padding-right: 24px;
@@ -219,7 +260,7 @@ a{
   }
   
   .chapter.aanbevelingen{
-    background-color: white;
+    background-color: transparent;
     color: var(--dark-brown2);
     padding-left: 24px;
     padding-right: 24px;

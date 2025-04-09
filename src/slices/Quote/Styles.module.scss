@@ -1,5 +1,5 @@
 .quoteWrapper{
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
   margin-bottom: 48px;
   border-left: 1px solid;
@@ -7,7 +7,7 @@
   padding-right: 14px;
   padding-top: 24px;
   .quote h2{
-    font-size: 36px;
+    font-size: 30px;
     font-family: "IBM MONO";
     line-height: 1.4;
     letter-spacing: 1px;
@@ -18,7 +18,7 @@
   }
 }
 
-@media (max-width: 768px){
+@media (max-width: 1000px){
   .quoteWrapper{
     margin-left: 0px;
     width: 100%;

@@ -122,7 +122,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       <div className={styles.intro}>
         <PrismicRichText field={slice.primary.title} />
       </div>
-      <div className={styles.heartWrap}>
+      <div className={styles.heartWrap} id="heartWrap">
         <svg
           className={styles.heart}
           id="heart"
