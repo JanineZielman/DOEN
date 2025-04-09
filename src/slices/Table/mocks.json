@@ -1,0 +1,47 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "luck",
+				"type": "Text"
+			},
+			"vorm": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Id est magna qui aliqua quis dolore qui."
+						}
+					}
+				]
+			},
+			"focus": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Non qui quis minim excepteur eu sint excepteur proident eu ea. Nostrud consequat exercitation veniam ea magna nostrud anim laborum velit."
+						}
+					}
+				]
+			},
+			"link": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ut voluptate voluptate ut adipisicing laboris aliquip voluptate sit mollit. Sint consectetur duis velit proident ea amet mollit. Adipisicing aliqua laborum ipsum elit nostrud ipsum consequat exercitation aliqua sit ex reprehenderit."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

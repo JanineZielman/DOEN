@@ -162,6 +162,9 @@ const Opening: FC<OpeningProps> = ({ slice }) => {
 
   return (
     <div className={styles.wrapper}>
+      <div className={styles.download}>
+        Download
+      </div>
       <div className={styles.intro}>
         <div className={styles.langSwitch}>
           EN / <b>NL</b>

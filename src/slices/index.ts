@@ -8,5 +8,6 @@ export const components = {
   image: dynamic(() => import("./Image")),
   opening: dynamic(() => import("./Opening")),
   quote: dynamic(() => import("./Quote")),
+  table: dynamic(() => import("./Table")),
   text: dynamic(() => import("./Text")),
 };

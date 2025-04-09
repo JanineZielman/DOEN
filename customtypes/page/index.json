@@ -22,11 +22,23 @@
           "single": "heading1"
         }
       },
+      "pdf": {
+        "type": "Link",
+        "config": {
+          "label": "PDF",
+          "placeholder": "",
+          "select": "media",
+          "allowText": false
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "text": {
+              "type": "SharedSlice"
+            },
             "opening": {
               "type": "SharedSlice"
             }

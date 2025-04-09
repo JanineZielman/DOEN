@@ -1,21 +1,23 @@
-'use client'
-import Link from "next/link";
+'use client';
+
+import { usePathname } from 'next/navigation';
 
 export default function Menu() {
-  const handlePrint = () => {
-    // window.print();
-  };
+  const pathname = usePathname();
+
+  const isActive = (href) => pathname === href;
+
   return (
     <div className="menu">
       <div className="left">
-        <Link href="/">HOME</Link>
-        <a href="/achtergrond">H1</a>
-        <a href="/het-financieringslandschap">H2</a>
-        <a href="/potentiele-focusgebieden">H3</a>
-        <a href="/aanbevelingen">H4</a>
+        <a href="/" className={isActive('/') ? 'active' : ''}>HOME</a>
+        <a href="/achtergrond" className={isActive('/achtergrond') ? 'active' : ''}>H1</a>
+        <a href="/het-financieringslandschap" className={isActive('/het-financieringslandschap') ? 'active' : ''}>H2</a>
+        <a href="/potentiele-focusgebieden" className={isActive('/potentiele-focusgebieden') ? 'active' : ''}>H3</a>
+        <a href="/aanbevelingen" className={isActive('/aanbevelingen') ? 'active' : ''}>H4</a>
       </div>
-      <div className="right" onClick={handlePrint}>
-        Print
+      <div className="right">
+        <a href="/colofon" className={isActive('/colofon') ? 'active' : ''}>COLOFON</a>
       </div>
     </div>
   );

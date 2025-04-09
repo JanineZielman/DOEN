@@ -5,6 +5,14 @@
   min-height: 100svh;
 }
 
+.download{
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
 .intro{
   position: absolute;
   z-index: 9;
@@ -54,19 +62,20 @@
         color: var(--orange);
       }
       &:hover{
-        border-radius: 0;
+        font-weight: 600;
       }
     }
   }
 }
 
 .heartWrap {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: -1;
 }
 
 .heart {
@@ -99,7 +108,7 @@
   width: 100px;
   height: 100px;
   background-color: black;
-  position: absolute;
+  position: fixed;
   right: 14px;
   bottom: 0;
   mask-image: url(/logo.svg);
@@ -124,11 +133,16 @@
   }
   .footer{
     p{
+      font-size: 14px;
       max-width: calc(100% - 100px);
     }
   }
   .logo{
     width: 90px;
     height: 90px;
+    position: absolute;
+  }
+  .download{
+    position: absolute;
   }
 }
