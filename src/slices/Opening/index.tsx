@@ -3,6 +3,7 @@ import { FC, useEffect } from "react";
 import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import styles from "./Styles.module.scss";
+import Lang from "../../components/lang"
 
 export type OpeningProps = SliceComponentProps<Content.OpeningSlice>;
 
@@ -158,21 +159,15 @@ const Opening: FC<OpeningProps> = ({ slice }) => {
     }
   }, []);
 
-  console.log(slice)
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.download}>
-        Download
-      </div>
       <div className={styles.intro}>
-        <div className={styles.langSwitch}>
-          EN / <b>NL</b>
-        </div>
+        <Lang/>
         <PrismicRichText field={slice.primary.title}/>
         <div className={styles.links}>
           {slice.primary.link.map((link:any, i) => (
-            <a key={`link${i}`} href={`/${link.uid}`}>{link.text}</a>
+            <a key={`link${i}`} href={`/${link.lang}/${link.uid}`}>{link.text}</a>
           ))}
         </div>
       </div>
@@ -185,7 +180,7 @@ const Opening: FC<OpeningProps> = ({ slice }) => {
         </svg>
       </div>
       <div className={styles.footer}>
-        <p>In opdracht van Stichting DOEN, Door Martijn Blom en Arthur Steiner</p>
+        <p>{slice.primary.footer}</p>
         <div className={styles.logo}></div>
       </div>
     </div>

@@ -172,6 +172,8 @@ a{
   top: 0;
   padding: 10px 24px;
   display: flex;
+  width: 100%;
+  justify-content: space-between;
   a{
     margin-right: 24px;
     text-decoration: none;
@@ -182,6 +184,21 @@ a{
       margin-top: 12px;
       margin-left: -50%;
       transform: translateX(-50%);
+    }
+  }
+  .right{
+    a{
+      margin-right: 0;
+    }
+  }
+}
+
+.lang-switch{
+  a{
+    text-decoration: none;
+    transition: all 0.4s ease;
+    &.active, &:hover{
+      font-weight: bold;
     }
   }
 }

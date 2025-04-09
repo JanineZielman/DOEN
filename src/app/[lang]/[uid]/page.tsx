@@ -1,23 +1,25 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { reverseLocaleLookup } from "@/i18n";
 
 import { asText } from "@prismicio/client";
 import { SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
-import Menu from "../../components/menu"
+import Menu from "../../../components/menu"
 
-type Params = { uid: string };
+type Params = { lang: string; uid: string };
 
 export default async function Page({ params }: { params: Promise<Params> }) {
-  const { uid } = await params;
+  const { lang, uid } = await params;
   const client = createClient();
-  const page = await client.getByUID("chapter", uid).catch(() => notFound());
+  const page = await client.getByUID("chapter", uid, { lang: reverseLocaleLookup(lang)}).catch(() => notFound());
+  const menu = await client.getByType('menu', { lang: reverseLocaleLookup(lang)}).catch(() => notFound())
 
   return (
     <div className={`chapter ${page.uid}`}>
-      <Menu/>
+      <Menu menu={menu.results[0].data}/>
       <SliceZone slices={page.data.slices} components={components} />
     </div>
   )
@@ -28,9 +30,9 @@ export async function generateMetadata({
 }: {
   params: Promise<Params>;
 }): Promise<Metadata> {
-  const { uid } = await params;
+  const { lang, uid } = await params;
   const client = createClient();
-  const page = await client.getByUID("chapter", uid).catch(() => notFound());
+  const page = await client.getByUID("chapter", uid, { lang: reverseLocaleLookup(lang)}).catch(() => notFound());
 
   return {
     title: asText(page.data.title),

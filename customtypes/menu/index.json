@@ -1,0 +1,42 @@
+{
+  "format": "custom",
+  "id": "menu",
+  "label": "Menu",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "links": {
+        "type": "Link",
+        "config": {
+          "label": "Links",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": true
+        }
+      },
+      "links2": {
+        "type": "Link",
+        "config": {
+          "label": "Links2",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": true
+        }
+      },
+      "pdf": {
+        "type": "Link",
+        "config": {
+          "label": "PDF",
+          "placeholder": "",
+          "select": "media",
+          "allowText": true
+        }
+      }
+    }
+  }
+}

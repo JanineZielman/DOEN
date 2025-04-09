@@ -86,6 +86,60 @@ export type ChapterDocument<Lang extends string = string> =
     Lang
   >;
 
+/**
+ * Content for Menu documents
+ */
+interface MenuDocumentData {
+  /**
+   * Links field in *Menu*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: menu.links
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  links: prismic.Repeatable<
+    prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+  >;
+
+  /**
+   * Links2 field in *Menu*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: menu.links2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  links2: prismic.Repeatable<
+    prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+  >;
+
+  /**
+   * PDF field in *Menu*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: menu.pdf
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  pdf: prismic.LinkToMediaField<prismic.FieldState, never>;
+}
+
+/**
+ * Menu document from Prismic
+ *
+ * - **API ID**: `menu`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type MenuDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<Simplify<MenuDocumentData>, "menu", Lang>;
+
 type PageDocumentDataSlicesSlice = TextSlice | OpeningSlice;
 
 /**
@@ -102,17 +156,6 @@ interface PageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   title: prismic.TitleField;
-
-  /**
-   * PDF field in *Page*
-   *
-   * - **Field Type**: Link to Media
-   * - **Placeholder**: *None*
-   * - **API ID Path**: page.pdf
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  pdf: prismic.LinkToMediaField<prismic.FieldState, never>;
 
   /**
    * Slice Zone field in *Page*
@@ -169,7 +212,7 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-export type AllDocumentTypes = ChapterDocument | PageDocument;
+export type AllDocumentTypes = ChapterDocument | MenuDocument | PageDocument;
 
 /**
  * Primary content in *Footnotes → Default → Primary*
@@ -385,6 +428,16 @@ export interface OpeningSliceDefaultPrimary {
   link: prismic.Repeatable<
     prismic.LinkField<string, string, unknown, prismic.FieldState, never>
   >;
+
+  /**
+   * Footer field in *Opening → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: opening.default.primary.footer
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  footer: prismic.KeyTextField;
 }
 
 /**
@@ -607,6 +660,8 @@ declare module "@prismicio/client" {
       ChapterDocument,
       ChapterDocumentData,
       ChapterDocumentDataSlicesSlice,
+      MenuDocument,
+      MenuDocumentData,
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,

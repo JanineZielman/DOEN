@@ -19,8 +19,8 @@
 				"type": "Link",
 				"value": [
 					{
-						"__TYPE__": "LinkContent",
 						"key": "a06fe332-edf4-461b-908d-516fb0c19c52",
+						"__TYPE__": "LinkContent",
 						"value": {
 							"__TYPE__": "ExternalLink",
 							"url": "http://google.com",
@@ -28,6 +28,11 @@
 						}
 					}
 				]
+			},
+			"footer": {
+				"__TYPE__": "FieldContent",
+				"value": "dried",
+				"type": "Text"
 			}
 		},
 		"items": []
