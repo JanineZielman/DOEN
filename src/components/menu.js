@@ -17,7 +17,7 @@ export default function Menu() {
         <a href="/aanbevelingen" className={isActive('/aanbevelingen') ? 'active' : ''}>H4</a>
       </div>
       <div className="right">
-        <a href="/colofon" className={isActive('/colofon') ? 'active' : ''}>COLOFON</a>
+        <a href="#">Download</a>
       </div>
     </div>
   );

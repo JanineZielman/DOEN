@@ -151,15 +151,38 @@ a{
   a{
     margin-right: 24px;
     text-decoration: none;
+    position: relative;
     &.active:after{
       content: '•';
       position: absolute;
       margin-top: 12px;
-      margin-left: -12.5px;
+      margin-left: -50%;
+      transform: translateX(-50%);
     }
   }
   .right a{
     margin-right: 0;
+  }
+}
+
+.left-menu{
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  padding: 10px 24px;
+  display: flex;
+  a{
+    margin-right: 24px;
+    text-decoration: none;
+    position: relative;
+    &.active:after{
+      content: '•';
+      position: absolute;
+      margin-top: 12px;
+      margin-left: -50%;
+      transform: translateX(-50%);
+    }
   }
 }
 

@@ -6,31 +6,26 @@ import { SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
-import Menu from "../../components/menu"
+import LeftMenu from "../../components/left-menu";
 
-type Params = { uid: string };
 
-export default async function Page({ params }: { params: Promise<Params> }) {
-  const { uid } = await params;
+export default async function Page() {
   const client = createClient();
-  const page = await client.getByUID("chapter", uid).catch(() => notFound());
+  const page = await client.getByUID("page", "introductie").catch(() => notFound());
 
   return (
     <div className={`chapter ${page.uid}`}>
-      <Menu/>
+      <LeftMenu/>
       <SliceZone slices={page.data.slices} components={components} />
     </div>
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<Params>;
+export async function generateMetadata( {
+
 }): Promise<Metadata> {
-  const { uid } = await params;
   const client = createClient();
-  const page = await client.getByUID("chapter", uid).catch(() => notFound());
+  const page = await client.getByUID("page", "introductie").catch(() => notFound());
 
   return {
     title: asText(page.data.title),
@@ -40,13 +35,4 @@ export async function generateMetadata({
       images: [{ url: page.data.meta_image.url ?? "" }],
     },
   };
-}
-
-export async function generateStaticParams() {
-  const client = createClient();
-
-  // Get all pages from Prismic, except the homepage.
-  const pages = await client.getAllByType("chapter");
-
-  return pages.map((page) => ({ uid: page.uid }));
 }

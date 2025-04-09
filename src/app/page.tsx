@@ -5,6 +5,7 @@ import { SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
+import LeftMenu from "../components/left-menu"
 
 export default async function Home() {
   const client = createClient();
@@ -13,6 +14,7 @@ export default async function Home() {
   // <SliceZone> renders the page's slices.
   return (
     <div className="home">
+      <LeftMenu/>
       <SliceZone slices={home.data.slices} components={components} />
     </div>
   )
