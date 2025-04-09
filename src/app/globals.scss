@@ -306,6 +306,10 @@ table{
   
 }
 
+#heart{
+  display: none;
+}
+
 
 @media print{
   @page {
@@ -315,7 +319,7 @@ table{
   body{
     background-color: transparent;
   }
-  .menu{
+  .menu, .left-menu{
     display: none;
   }
   table{
