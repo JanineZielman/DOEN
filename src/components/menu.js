@@ -10,7 +10,8 @@ export default function Menu() {
   return (
     <div className="menu">
       <div className="left">
-        <a href="/" className={isActive('/') ? 'active' : ''}>HOME</a>
+        <a href="/" className={isActive('/') ? 'active' : ''}>Home</a>
+        <a href="/introductie" className={isActive('/introductie') ? 'active' : ''}>Introductie</a>
         <a href="/achtergrond" className={isActive('/achtergrond') ? 'active' : ''}>H1</a>
         <a href="/het-financieringslandschap" className={isActive('/het-financieringslandschap') ? 'active' : ''}>H2</a>
         <a href="/potentiele-focusgebieden" className={isActive('/potentiele-focusgebieden') ? 'active' : ''}>H3</a>

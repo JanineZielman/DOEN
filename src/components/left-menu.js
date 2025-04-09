@@ -11,7 +11,6 @@ export default function LeftMenu() {
   return (
     <div className="left-menu">
       <a href="/" className={isActive('/') ? 'active' : ''}>Home</a>
-      <a href="/introductie" className={isActive('/introductie') ? 'active' : ''}>Introductie</a>
       <a href="/colofon" className={isActive('/colofon') ? 'active' : ''}>Colofon</a>
     </div>
   );
