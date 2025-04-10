@@ -338,6 +338,10 @@ table{
 
 
 @media print{
+  a{
+    text-decoration-thickness: 0.5px;
+    text-underline-position: under;
+  }
   @page {
     size: A4 portrait;
     margin: 12mm;

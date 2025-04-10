@@ -31,20 +31,6 @@
             "allowText": true,
             "repeat": true
           }
-        },
-        "footer": {
-          "type": "Text",
-          "config": {
-            "label": "Footer",
-            "placeholder": ""
-          }
-        },
-        "extra": {
-          "type": "Text",
-          "config": {
-            "label": "Extra",
-            "placeholder": ""
-          }
         }
       },
       "items": {}

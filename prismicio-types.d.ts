@@ -428,26 +428,6 @@ export interface OpeningSliceDefaultPrimary {
   link: prismic.Repeatable<
     prismic.LinkField<string, string, unknown, prismic.FieldState, never>
   >;
-
-  /**
-   * Footer field in *Opening → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: opening.default.primary.footer
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  footer: prismic.KeyTextField;
-
-  /**
-   * Extra field in *Opening → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: opening.default.primary.extra
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  extra: prismic.KeyTextField;
 }
 
 /**
