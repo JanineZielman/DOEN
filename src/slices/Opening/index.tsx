@@ -182,6 +182,7 @@ const Opening: FC<OpeningProps> = ({ slice }) => {
       <div className={styles.footer}>
         <p>{slice.primary.footer}</p>
         <div className={styles.logo}></div>
+        
       </div>
     </div>
   );
