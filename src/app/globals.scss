@@ -56,6 +56,7 @@ li{
   font-size: 24px;
   line-height: 1.5;
   margin-bottom: 24px;
+  letter-spacing: 1px;
 }
 
 h3{
@@ -273,7 +274,7 @@ table{
 }
 
 
-@media (max-width: 1000px){
+@media only screen and (max-width: 1000px){
   p, li{
     font-size: 18px;
   }
@@ -303,13 +304,10 @@ table{
   .chapter.potentiele-focusgebieden, .chapter.aanbevelingen{
     padding-right: 15vw;
   }
-  
+  .menu, .left-menu{
+    padding: 5px 10px 10px 10px;
+  }
 }
-
-#heart{
-  display: none;
-}
-
 
 @media print{
   @page {
