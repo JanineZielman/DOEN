@@ -6,6 +6,7 @@ export default function Menu({menu}) {
   const pathname = usePathname();
 
   const isActive = (href) => pathname === href;
+  console.log(menu)
 
   return (
     <div className="menu">
@@ -16,7 +17,7 @@ export default function Menu({menu}) {
             <a key={`links${i}`} href={`/${item.lang}/${item.uid != 'home' ? item.uid : '' }`} className={isActive(`/${item.lang}/${item.uid}`) ? 'active' : ''}>
               {item.text}
               <div className='hidden'>
-                {item.uid.replaceAll('-', ' ')}
+                {item.slug.replaceAll('-', ' ').replaceAll('.', '').replaceAll(/[0-9]/g, '')}
               </div>
             </a>
           )

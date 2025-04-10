@@ -336,6 +336,7 @@ table{
   }
 }
 
+
 @media print{
   @page {
     size: A4 portrait;
@@ -375,6 +376,9 @@ table{
   }
   h1{
     font-size: 48px!important;
+  }
+  h3{
+    font-size: 28px;
   }
   h3, h4{
     page-break-before: always;
