@@ -24,7 +24,6 @@
     width: 100%;
     padding-right: 0;
     border-left: 1px solid;
-    border-right: 0px solid;
 
     .quote h2{
       font-size: 20px;
@@ -37,8 +36,11 @@
 
 @media print{
   .quoteWrapper{
+    margin-left: 0px;
+    padding-right: 0;
     break-inside: avoid;
-    margin-top: 48px;
+    margin-top: 0;
+    border-left: 1px solid;
     .quote h2{
       font-size: 24px;
     }

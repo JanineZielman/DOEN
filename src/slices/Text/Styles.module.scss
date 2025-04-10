@@ -22,6 +22,7 @@
 
 @media print{
   .textWrapper{
+    padding: 0;
     p, li{
       break-inside: avoid;
     }
