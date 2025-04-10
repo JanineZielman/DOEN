@@ -159,6 +159,8 @@ const Opening: FC<OpeningProps> = ({ slice }) => {
     }
   }, []);
 
+  console.log(slice)
+
 
   return (
     <div className={styles.wrapper}>
@@ -180,9 +182,9 @@ const Opening: FC<OpeningProps> = ({ slice }) => {
         </svg>
       </div>
       <div className={styles.footer}>
-        <p>{slice.primary.footer}</p>
+        <p>{slice.primary.extra}</p>
         <div className={styles.logo}></div>
-        
+
       </div>
     </div>
   );

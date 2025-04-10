@@ -38,6 +38,13 @@
             "label": "Footer",
             "placeholder": ""
           }
+        },
+        "extra": {
+          "type": "Text",
+          "config": {
+            "label": "Extra",
+            "placeholder": ""
+          }
         }
       },
       "items": {}

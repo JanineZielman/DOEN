@@ -33,6 +33,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "dried",
 				"type": "Text"
+			},
+			"extra": {
+				"__TYPE__": "FieldContent",
+				"value": "possible",
+				"type": "Text"
 			}
 		},
 		"items": []
