@@ -149,6 +149,19 @@ a{
   width: 100%;
   display: flex;
   justify-content: space-between;
+  transition: all 0.4s ease;
+  &:hover{
+    padding-bottom: 24px;
+  }
+  .hidden{
+    display: none;
+    position: absolute;
+    left: 0;
+    white-space: nowrap;
+    text-transform: capitalize;
+    transition: all 0.4s ease;
+    font-size: 14px;
+  }
   a{
     margin-right: 24px;
     text-decoration: none;
@@ -159,6 +172,11 @@ a{
       margin-top: 12px;
       margin-left: -50%;
       transform: translateX(-50%);
+    }
+    &:hover{
+      .hidden{
+        display: block;
+      }
     }
   }
   .right a{

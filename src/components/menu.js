@@ -11,8 +11,14 @@ export default function Menu({menu}) {
     <div className="menu">
       <div className="left">
         {menu.links.map((item, i) => {
+          console.log(item)
           return(
-            <a key={`links${i}`} href={`/${item.lang}/${item.uid != 'home' ? item.uid : '' }`} className={isActive(`/${item.lang}/${item.uid}`) ? 'active' : ''}>{item.text}</a>
+            <a key={`links${i}`} href={`/${item.lang}/${item.uid != 'home' ? item.uid : '' }`} className={isActive(`/${item.lang}/${item.uid}`) ? 'active' : ''}>
+              {item.text}
+              <div className='hidden'>
+                {item.uid.replaceAll('-', ' ')}
+              </div>
+            </a>
           )
         })}
       </div>
