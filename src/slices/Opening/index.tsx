@@ -159,9 +159,6 @@ const Opening: FC<OpeningProps> = ({ slice }) => {
     }
   }, []);
 
-  console.log(slice)
-
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.intro}>
@@ -182,7 +179,11 @@ const Opening: FC<OpeningProps> = ({ slice }) => {
         </svg>
       </div>
       <div className={styles.footer}>
-        <p>{slice.primary.extra}</p>
+      {(slice.primary.link?.[0] as any)?.lang === 'en-us' ? 
+          <p>Commissioned by Stichting DOEN Participaties B.V. <br/> Performed by Martijn Blom en Arthur Steiner</p>
+        :
+          <p>In opdracht van DOEN Participaties B.V. <br/> Door Martijn Blom en Arthur Steiner</p>
+        }
         <div className={styles.logo}></div>
 
       </div>
