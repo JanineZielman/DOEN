@@ -24,7 +24,7 @@ export default function Menu({menu}) {
         })}
       </div>
       <div className="right">
-        <a target='_blank' href={menu.pdf.url}>Download</a>
+        <a target='_blank' href={`/${menu.links2[0].lang}/Print.pdf`}>Download</a>
       </div>
     </div>
   );
