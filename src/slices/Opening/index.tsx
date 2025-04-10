@@ -180,7 +180,7 @@ const Opening: FC<OpeningProps> = ({ slice }) => {
       </div>
       <div className={styles.footer}>
       {(slice.primary.link?.[0] as any)?.lang === 'en-us' ? 
-          <p>Commissioned by Stichting DOEN Participaties B.V. <br/> Performed by Martijn Blom en Arthur Steiner</p>
+          <p>Commissioned by DOEN Participaties B.V. <br/> Performed by Martijn Blom en Arthur Steiner</p>
         :
           <p>In opdracht van DOEN Participaties B.V. <br/> Door Martijn Blom en Arthur Steiner</p>
         }
