@@ -178,7 +178,7 @@ const Opening: FC<OpeningProps> = ({ slice }) => {
           <path id="heart-path-1" ></path>
         </svg>
       </div>
-      <div className={styles.footer}>
+      <div id="footer" className={styles.footer}>
       {(slice.primary.link?.[0] as any)?.lang === 'en-us' ? 
           <p>Commissioned by DOEN Participaties B.V. <br/> Performed by Martijn Blom en Arthur Steiner</p>
         :
